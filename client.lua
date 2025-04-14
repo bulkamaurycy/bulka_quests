@@ -17,6 +17,8 @@ exports('AddQuest', function(description, icon)
     action = 'addQuest',
     quest = newQuest
   })
+
+  return id
 end)
 
 exports('RemoveQuest', function(id)
