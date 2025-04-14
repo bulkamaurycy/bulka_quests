@@ -4,7 +4,8 @@
 
 ```lua
 RegisterCommand("start-quest", function()
-  exports['bulka_quests']:AddQuest("EAT A BURGER", "fa-solid fa-burger")
+  local quest = exports['bulka_quests']:AddQuest("EAT A BURGER", "fa-solid fa-burger")
+  print(quest)
 end, false)
 
 RegisterCommand("remove-quest", function()
@@ -21,7 +22,7 @@ https://imgur.com/a/g9gyjQC
 
 ## Functions
 
-- `AddQuest(label, icon)` – adds a new quest with an icon from Font Awesome  
+- `AddQuest(label, icon)` – adds a new quest with an icon from Font Awesome and returns the quest ID.
 - `RemoveQuest(id)` – removes a quest by ID  
 - `CompleteQuest(id)` – completes a quest by ID
 
